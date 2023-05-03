@@ -1,0 +1,293 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth; /*NAVEGAR MAS NATURAL*/
+}
+body{
+   margin: 0;
+   font-family: 'Times New Roman', Times, serif;
+}
+h1{ font-size: 3em; } /*medida del padre*/
+h2{ font-size: 2em; }
+h3{ font-size: 1.7em; }
+p{ font-size: 1em; }
+ul{ list-style: none;} /*lo quita*/
+li{font-size: 1em;}
+button {
+    font-size: 2.5em;
+    font-weight: bold; /*negrita*/
+    padding: 10px 20px; /*izquierda arriba*/
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /*sombras*/
+    color: white;
+    background-color: blue;
+}
+button:hover{
+    background-color: rgb(13, 0, 197);
+}
+/*MOVIL*/
+
+.container{
+    max-width: 1200px; /*cuando sea muy grande no se movera*/
+    margin: auto;
+}
+.logo{
+    text-align: center;
+    font-size: 3.3em
+}
+header{
+    background-color: rgb(245, 245, 245); /*blanco --*/
+    padding-bottom: 20px;
+}
+header p{
+    margin: 0;
+    padding: 25px 30px;
+    color: blue;
+    font-size: 1.5em;
+   
+}
+header .container{
+    display: flex;
+    flex-direction: column; /*ORDENA EN COLU;*/
+    align-items: center;
+}   
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 15px;
+}
+
+header a {
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+header a:hover{
+    color:rgb(13, 0, 197)
+}
+
+#hero{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("https://img.freepik.com/fotos-premium/desarrollador-python-script-java-html-codigo-fuente-css-pantalla-monitor-escritura-guion-desarrollador-software-codificacion-programa-programador-fondo-codigo-edicion-fondo-tecnologia-primer-plano_234527-72.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#hero h1{
+    color: white;
+}
+
+
+
+.color-acento{
+    color: blue;
+}
+
+#nosotros .container{
+    text-align: center;
+    padding: 200px 12px;
+    background-color: rgb(230, 230, 230);
+}
+
+
+/*------------------*/
+#nuestros-programas{
+    background-color: rgb(30, 30, 30);
+    color: white;
+    text-align: center;
+    
+}
+#nuestros-programas .container{
+    padding: 50px 12px;
+}
+
+.carta h3{
+    margin-top: 0;
+    font-size: 2em;
+    padding-top: 30px;
+}
+
+.nuestros-programas-h3{
+    font-size: 3em;
+}
+
+#nuestros-programas p{
+    display: none;
+}
+.carta{
+    margin: 30px;
+    padding: 50px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center center;
+}
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/front.jpg");
+}
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/back.jpeg");
+}
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/full.png");
+}
+
+
+
+/*-------------------*/
+
+#final{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 50vh;
+    background-color: rgb(30, 30, 30);
+    color: white;
+}
+#final h2{
+    font-size: 9vw;
+}
+#final button{
+    font-size: 5vw;
+}
+
+/*---------------*/
+
+footer{
+    background-color: rgb(230, 230, 230);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100, 100, 100);
+}
+
+footer .container{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-end;
+    
+}
+
+
+
+
+/*--------------------------------------*/
+
+/*PC*/
+
+@media (min-width: 720px) {
+    header{
+        padding-bottom: 5px;
+        position: fixed;
+        width: 100%;
+    }
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+    
+    header nav{
+        flex-direction: row;
+        padding-right: 0;
+    }
+    #hero h1{
+        font-size: 6em;
+    }
+  
+    #nosotros .container{
+        display: flex;
+        justify-content: center;
+        background-color: rgb(255, 255, 255);
+
+    }
+    #nosotros .img-container{
+        background-image:url("media/front.jpg");
+    background-size: cover;
+  
+    background-position: center center;
+    height: 400px;
+    width: 300px;
+    border-radius: 30px;
+    }
+    
+    #nosotros .text{
+        max-width: 600px;
+        width: 50%;
+       
+        text-align: initial; /*SS*/
+        padding: 0px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #nosotros h2{
+        margin-top: 0;
+    }
+     #final{
+        height: 120vh;
+     }
+    
+    #nuestros-programas .programas{
+        display: flex;
+        justify-content: center;
+
+    }
+    #nuestros-programas p{
+        display: block;
+        margin-bottom: 30px;
+    }
+    #nuestros-programas .carta{
+        padding: 50px;    
+        background-size: 100% 180px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        border: 1px solid rgb(245, 245, 245);
+        border-radius: 15px;
+        background-color: rgb(50, 50, 50);
+        box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.5);
+    }
+    #nuestros-programas h3{
+        margin-top: 0;
+    }
+   
+}
+
